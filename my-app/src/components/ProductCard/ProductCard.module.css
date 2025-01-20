@@ -1,0 +1,39 @@
+.main_link {
+    text-decoration: none;
+}
+
+.card_unit {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    width: 300px;
+    border-radius: 15px;
+}
+
+.card_img {
+    width: 100%;
+    float: left;
+    border-radius: 15px;
+}
+
+.card_unit_description_container{
+    padding: 10px 20px 10px 20px;
+}
+
+.card_name {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: normal;
+    color: #000;
+}
+
+.card_price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #505050;
+}
+
+.card_dimensions {
+    color: #505050;
+    font-size: 14px;
+}

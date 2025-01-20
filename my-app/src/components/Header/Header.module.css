@@ -1,0 +1,106 @@
+.header_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* Выравнивание по левому краю */
+    background-color: orange;
+    padding: 20px;
+}
+
+.logo_image {
+    height: auto;
+    max-width: 100%;
+    display: block;
+    position: relative;
+    left: 0;
+}
+
+.logo_container {
+    display: flex;
+    flex-direction: column;
+    /* Вертикальная компоновка */
+    align-items: flex-start;
+    /* Выравнивание по левому краю */
+    margin-right: auto;
+
+}
+
+.logo_text {
+    font-size: 20px;
+    text-transform: uppercase;
+    /* Превращает текст в прописные буквы */
+    margin-bottom: 5px;
+    /* Отступ между текстом и изображением */
+    margin: 0 20px;
+}
+
+.header_content_h1 {
+    font-style: italic;
+    /* Применяет курсивный шрифт */
+}
+
+.header_content_p {
+    display: block;
+    color: blue;
+    margin: 0;
+    background-color: #d3d3d3;
+    padding:  10px 35px 10px 35px;
+    font-size: 18px;
+    font-style: italic;
+}
+.header_content_hr {
+    height: 1px;
+    width: 100%;
+    margin: 5px 0; 
+    color: black;
+    border-color: #000000;
+    background-color: #000;
+}
+
+.nav_buttons_a {
+    font-style: italic;
+    color: black;
+    text-decoration: none;
+}
+
+.nav_buttons {
+    /* padding-left: -100px; Увеличьте значение, чтобы сместить весь блок */
+	display: flex;
+    gap: 80px; /* Измените это значение, чтобы увеличить отступы */
+	color: #000000; /* Цвет текста (чёрный) */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: bold; /* Начертание (жирный) */
+    text-decoration: none; /* Убрать подчеркивание */
+}
+
+.header_content {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    align-items: center;
+}
+
+h1 {
+    margin-left: 80px;
+    font-family: Arial, sans-serif;
+    /* Замените на актуальный шрифт из кнопок */
+    font-size: 20px;
+    /* Замените на актуальный размер шрифта из кнопок */
+    font-weight: bold;
+    /* Убедитесь, что вес шрифта соответствует стилю кнопок */
+}
+
+
+
+.btn_container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    width: 150px;
+}
+
+.user {
+    margin: 0;
+}

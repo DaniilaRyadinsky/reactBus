@@ -1,0 +1,18 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    /* Вертикальная компоновка для изображений */
+    margin-left: 20px;
+    width: 200px;
+    text-align: right;
+    gap: 15px;
+}
+
+.sidebar_img {
+    max-width: 100%;
+    /* Изображения будут адаптивными */
+    height: auto;
+    /* Высота будет подстраиваться под ширину */
+}
+
+.sidebar_item {}

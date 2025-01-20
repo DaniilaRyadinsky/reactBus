@@ -1,0 +1,27 @@
+.container {
+    padding: 20px 20px 20px 20px;
+    background-color: #eaeaea;
+    font-family: Arial, sans-serif;
+}
+
+.content_container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 20px 20px 20px;
+
+}
+
+.content {
+    width: 1600px;
+    padding: 10px 10px 10px 10px;
+    border: 3px solid black;
+}
+
+.footer {
+    padding: 15px 15px 15px 15px;
+    background-color: #d3d3d3;
+    margin-top: 40px;
+}
+.footer_p {
+    text-align: center;
+}

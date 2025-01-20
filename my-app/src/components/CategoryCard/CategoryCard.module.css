@@ -1,0 +1,21 @@
+.main_link {
+    text-decoration: none;
+}
+
+.card_unit {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    width: 150px;
+    border-radius: 15px;
+    padding: 20px 30px 20px 30px ;
+    background-color: #c1c1c1;
+}
+
+
+.card_title {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: normal;
+    color: #000;
+}
