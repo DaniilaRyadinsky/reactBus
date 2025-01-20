@@ -7,6 +7,22 @@
       "RelativeMoniker": "D:0:0:{B3DD389E-F668-4ACF-AE92-167C8F1949D6}|labaprovor.csproj|solutionrelative:usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B3DD389E-F668-4ACF-AE92-167C8F1949D6}|labaprovor.csproj|c:\\users\\dikij\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactbus\\labaprovor\\userview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3DD389E-F668-4ACF-AE92-167C8F1949D6}|labaprovor.csproj|solutionrelative:userview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3DD389E-F668-4ACF-AE92-167C8F1949D6}|labaprovor.csproj|c:\\users\\dikij\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactbus\\labaprovor\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3DD389E-F668-4ACF-AE92-167C8F1949D6}|labaprovor.csproj|solutionrelative:user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3DD389E-F668-4ACF-AE92-167C8F1949D6}|labaprovor.csproj|c:\\users\\dikij\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactbus\\labaprovor\\migrations\\20250120210440_addusinf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3DD389E-F668-4ACF-AE92-167C8F1949D6}|labaprovor.csproj|solutionrelative:migrations\\20250120210440_addusinf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3DD389E-F668-4ACF-AE92-167C8F1949D6}|labaprovor.csproj|c:\\users\\dikij\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactbus\\labaprovor\\classcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3DD389E-F668-4ACF-AE92-167C8F1949D6}|labaprovor.csproj|solutionrelative:classcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B3DD389E-F668-4ACF-AE92-167C8F1949D6}|labaprovor.csproj|c:\\users\\dikij\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactbus\\labaprovor\\buscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3DD389E-F668-4ACF-AE92-167C8F1949D6}|labaprovor.csproj|solutionrelative:buscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -42,7 +58,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "BusController.cs",
               "DocumentMoniker": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\BusController.cs",
               "RelativeDocumentMoniker": "BusController.cs",
@@ -61,7 +77,7 @@
               "RelativeDocumentMoniker": "UserController.cs",
               "ToolTip": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\UserController.cs",
               "RelativeToolTip": "UserController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAIwFIAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-18T21:30:53.946Z",
               "IsPinned": true,
@@ -69,7 +85,55 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserVIEW.cs",
+              "DocumentMoniker": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\UserVIEW.cs",
+              "RelativeDocumentMoniker": "UserVIEW.cs",
+              "ToolTip": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\UserVIEW.cs",
+              "RelativeToolTip": "UserVIEW.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T21:05:46.628Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "20250120210440_AddUsInf.cs",
+              "DocumentMoniker": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\Migrations\\20250120210440_AddUsInf.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250120210440_AddUsInf.cs",
+              "ToolTip": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\Migrations\\20250120210440_AddUsInf.cs",
+              "RelativeToolTip": "Migrations\\20250120210440_AddUsInf.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T21:04:40.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClassContext.cs",
+              "DocumentMoniker": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\ClassContext.cs",
+              "RelativeDocumentMoniker": "ClassContext.cs",
+              "ToolTip": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\ClassContext.cs",
+              "RelativeToolTip": "ClassContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T21:04:17.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\User.cs",
+              "RelativeDocumentMoniker": "User.cs",
+              "ToolTip": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\User.cs",
+              "RelativeToolTip": "User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T21:03:48.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "BusVIEEEEEW.cs",
               "DocumentMoniker": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\BusVIEEEEEW.cs",
               "RelativeDocumentMoniker": "BusVIEEEEEW.cs",
@@ -81,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "BusParams.cs",
               "DocumentMoniker": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\BusParams.cs",
               "RelativeDocumentMoniker": "BusParams.cs",
@@ -93,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "BusInput.cs",
               "DocumentMoniker": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\BusInput.cs",
               "RelativeDocumentMoniker": "BusInput.cs",
@@ -105,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "AuthOptions.cs",
               "DocumentMoniker": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\AuthOptions.cs",
               "RelativeDocumentMoniker": "AuthOptions.cs",
@@ -117,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",

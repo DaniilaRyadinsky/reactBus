@@ -6,7 +6,7 @@ namespace labaprovor
     {
         public ClassContext(DbContextOptions dbContext) : base(dbContext)
         {
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
         }
        
 

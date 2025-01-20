@@ -1,0 +1,5 @@
+C:\Users\dikij\OneDrive\Документы\study fuck\web\reactBus\ex\labaprovor\obj\Release\net8.0\win-x64\PubTmp\Out\appsettings.Development.json
+C:\Users\dikij\OneDrive\Документы\study fuck\web\reactBus\ex\labaprovor\obj\Release\net8.0\win-x64\PubTmp\Out\appsettings.json
+C:\Users\dikij\OneDrive\Документы\study fuck\web\reactBus\ex\labaprovor\obj\Release\net8.0\win-x64\PubTmp\Out\labaprovor.pdb
+C:\Users\dikij\OneDrive\Документы\study fuck\web\reactBus\ex\labaprovor\obj\Release\net8.0\win-x64\PubTmp\Out\e_sqlite3.dll
+C:\Users\dikij\OneDrive\Документы\study fuck\web\reactBus\ex\labaprovor\obj\Release\net8.0\win-x64\PubTmp\Out\labaprovor.exe
