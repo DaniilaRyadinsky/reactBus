@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("labaprovor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e29331c5a779bf0ab712fcecff3f049d079c7f0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f6c545171c9021b07e938427f05e72bade8945d2")]
 [assembly: System.Reflection.AssemblyProductAttribute("labaprovor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("labaprovor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from './Login.module.css'
-import { Link , useNavigate} from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import BtnReg from '../BtnReg/BtnReg'
 import Input from '../Input/Input'
 
@@ -45,7 +45,11 @@ const Login = ({ setActive }) => {
             "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
             "login": login,
             "password": password,
-            "email": "string"
+            "email": "string",
+            "firstName": "string",
+            "lastName": "string",
+            "middleName": "string",
+            "phoneNumber": "string"
         }
 
         fetch("http://localhost:5099/User/login", {
@@ -62,14 +66,14 @@ const Login = ({ setActive }) => {
                     sessionStorage.setItem("token", data['token']);
                     sessionStorage.setItem("username", data['username']);
                     setActive('none')
-                    window.location.reload( true ) ;
+                    window.location.reload(true);
                 }
                 else {
                     setPlaceholderogin("Неправильный логин или пароль!");
                     setPassword('')
                 }
                 console.log(data);
-                
+
             })
             .catch((error) => console.log(error));
 
