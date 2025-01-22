@@ -21,15 +21,18 @@ export { getToken, setToken };
 
 const Login = ({ setActive }) => {
     const [login, setLogin] = useState('')
-    const [password, setPassword] = useState('')
+    const [password1, setPassword1] = useState('')
+    const [password2, setPassword2] = useState('')
     const [placeholderLogin, setPlaceholderogin] = useState('')
     const [placeholderPassword, setPlaceholderPassword] = useState('')
 
     function handleChange(event) {
         if (event.target.id === "login")
             setLogin(event.target.value)
-        else if (event.target.id === "pass")
-            setPassword(event.target.value)
+        else if (event.target.id === "pass1")
+            setPassword1(event.target.value)
+        else if (event.target.id === "pass2")
+            setPassword2(event.target.value)
     }
 
     function auth() {
@@ -38,13 +41,17 @@ const Login = ({ setActive }) => {
         if (login === '') {
             setPlaceholderogin('Введите логин')
         }
-        if (password === '') {
+        if (password1 === '') {
             setPlaceholderPassword('Введите пароль')
+        }
+        if (password1 !== password2) {
+            setPlaceholderPassword('Пароли не совпадают')
+            return;
         }
         const struct = {
             "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
             "login": login,
-            "password": password,
+            "password": password1,
             "email": "string",
             "firstName": "string",
             "lastName": "string",
@@ -70,7 +77,7 @@ const Login = ({ setActive }) => {
                 }
                 else {
                     setPlaceholderogin("Неправильный логин или пароль!");
-                    setPassword('')
+                    setPassword1('')
                 }
                 console.log(data);
 
@@ -91,8 +98,9 @@ const Login = ({ setActive }) => {
                 </div>
                 <div>
                     {placeholderPassword !== '' && <p className={styles.err}>{placeholderPassword}</p>}
-                    <Input type="password" id="pass" placeholder='Пароль' onChange={handleChange} value={password} />
+                    <Input type="password" id="pass1" placeholder='Пароль' onChange={handleChange} value={password1} />
                 </div>
+                <Input type="password" value={password2} id="pass2" placeholder={'Повторите пароль'} onChange={handleChange} />
 
                 <Link className={styles.loginlink}>Не помню пароль</Link>
                 <div className={styles.btn_login_container}>

@@ -6,7 +6,7 @@ import Input from '../Input/Input'
 const Registration = ({ setActive }) => {
     const [login, setLogin] = useState('')
     const [password1, setPassword1] = useState('')
-    const [password2, setPassword2] = useState('')
+    // const [password2, setPassword2] = useState('')
     const [email, setEmail] = useState('')
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
@@ -23,8 +23,8 @@ const Registration = ({ setActive }) => {
             setLogin(event.target.value)
         else if (event.target.id === "pass1")
             setPassword1(event.target.value)
-        else if (event.target.id === "pass2")
-            setPassword2(event.target.value)
+        // else if (event.target.id === "pass2")
+        //     setPassword2(event.target.value)
         if (event.target.id === "email")
             setEmail(event.target.value)
         else if (event.target.id === "firstName")
@@ -40,11 +40,11 @@ const Registration = ({ setActive }) => {
     function reg() {
         console.log(login)
         console.log(password1)
-        console.log(password2)
-        if (password1 !== password2) {
-            setPlaceholderPassword('Пароли не совпадают')
-            return;
-        }
+        // console.log(password2)
+        // if (password1 !== password2) {
+        //     setPlaceholderPassword('Пароли не совпадают')
+        //     return;
+        // }
             
         const struct = {
             "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
@@ -89,7 +89,7 @@ const Registration = ({ setActive }) => {
                     {placeholderPassword !== '' && <p className={styles.err}>{placeholderPassword}</p>}
                     <Input type="password" id="pass1" placeholder='Пароль' onChange={handleChange} value={password1} />
                 </div>
-                <Input type="password" value={password2} id="pass2" placeholder={'Повторите пароль'} onChange={handleChange} />
+                {/* <Input type="password" value={password2} id="pass2" placeholder={'Повторите пароль'} onChange={handleChange} /> */}
                 <Input type="text" id="email" placeholder='Email' onChange={handleChange} value={email} />
                 <Input type="text" id="firstName" placeholder='Имя' onChange={handleChange} value={firstName} />
                 <Input type="text" id="lastName" placeholder='Фамилия' onChange={handleChange} value={lastName} />
