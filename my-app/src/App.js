@@ -2,7 +2,6 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  useNavigate,
 } from 'react-router-dom';
 import './App.css';
 
@@ -16,7 +15,6 @@ import AdmPage from './pages/AdmPage/admPage';
 import AdmPageEdit from './pages/AdmPage/admPageEdit';
 import Busket from './pages/Busket/Busket';
 import Category from './pages/Category/Category';
-import BusketCat from './pages/Busket/BusketCat';
 
 function App() {
   return (
@@ -34,7 +32,6 @@ function App() {
         <Route path='/admin/' element={<AdmPage/>}/>
         <Route path='/admin/edit/:id/' element={<AdmPageEdit/>}/>
         <Route path='/busket' element={<Busket/>}/>
-        <Route path='/busket/:id' element={<BusketCat/>}/>
         <Route path='/policy.txt' element={<PolicyPage />} />
       </Routes>
     </BrowserRouter>

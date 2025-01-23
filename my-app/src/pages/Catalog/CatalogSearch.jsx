@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ProductCard from '../../components/ProductCard/ProductCard'
-// import Navnavbar from '../components/Navnavbar/Navnavbar'
 import styles from './Catalog.module.css'
 import Container from '../../components/Container/Container'
 import Search from '../../components/Search/Search'

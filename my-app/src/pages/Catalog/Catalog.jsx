@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import styles from './Catalog.module.css'
 import Container from '../../components/Container/Container'
 import Search from '../../components/Search/Search'
 import CatalogModule from '../../components/CatalogModule/CatalogModule'
@@ -26,7 +25,6 @@ const Catalog = () => {
     }, [])
 
     return (
-
         <Container isActiveSideBar={true}>
             <Search />
             <CatalogModule items={items} loading={loading} link={'catalog'}/>

@@ -18,42 +18,27 @@ namespace labaprovor
             return Ok(ClassContext.Users.Select(u => new UserVIEW() { Login = u.Login, Password = u.Password, Email = u.Email, Id = u.Id, FirstName = u.FirstName, MiddleName = u.MiddleName, LastName = u.LastName, PhoneNumber = u.PhoneNumber }));
         }
 
-        [HttpGet("allcategorybyuser")]
-        public async Task<ActionResult<List<string>>> GetAllCategoryByUser([FromQuery] string Login)
-        {
-            return Ok(
-                ClassContext
-                    .Users
-                    .FirstOrDefault(u => u.Login == Login)!
-                    .Buses
-                    .Select(bp => bp.Params.Category)
-                    .Distinct()
-                    .ToList()
-                );
-        }
-
         [HttpGet("ordersbylogin")]
 
-        public ActionResult<List<BusVIEEEEEW>> GetOrdersById([FromQuery] string Login, string Category)
+        public ActionResult<List<BusVIEEEEEW>> GetOrdersById([FromQuery] string Login)
         {
             return Ok(ClassContext
                 .Users
                 .FirstOrDefault(u => u.Login == Login)!
                 .Buses
-                .Where(bs => bs.Params.Category == Category)
                 .Select(i => new BusVIEEEEEW()
-            {
-                Id = i.Id,
-                Title = i.Params.Title,
-                Description = i.Params.Description,
-                Consumption = i.Params.Consumption,
-                Services = i.Params.Services,
-                Speed = i.Params.Speed,
-                Сapacity = i.Params.Сapacity,
-                Image = i.Image.Image,
-                Category = i.Params.Category,
-                Price = i.Params.Price,
-            }));
+                {
+                    Id = i.Id,
+                    Title = i.Params.Title,
+                    Description = i.Params.Description,
+                    Consumption = i.Params.Consumption,
+                    Services = i.Params.Services,
+                    Speed = i.Params.Speed,
+                    Сapacity = i.Params.Сapacity,
+                    Image = i.Image.Image,
+                    Category = i.Params.Category,
+                    Price = i.Params.Price,
+                }));
         }
 
         [HttpPost("reg")]
@@ -61,14 +46,14 @@ namespace labaprovor
         {
             if (await ClassContext.Users.FirstOrDefaultAsync(u => u.Login == inputData.Login) != null)
                 return BadRequest("User already exists.");
-
+            string salt = BCrypt.Net.BCrypt.GenerateSalt(6);
             // Хеширование пароля
-            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(inputData.Password);
-            string hashedEmail = BCrypt.Net.BCrypt.HashPassword(inputData.Email);
-            string hashedFirstName = BCrypt.Net.BCrypt.HashPassword(inputData.FirstName);
-            string hashedMiddleName = BCrypt.Net.BCrypt.HashPassword(inputData.MiddleName);
-            string hashedLastName = BCrypt.Net.BCrypt.HashPassword(inputData.LastName);
-            string hashedPhoneNumber = BCrypt.Net.BCrypt.HashPassword(inputData.PhoneNumber);
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(inputData.Password, salt);
+            string hashedEmail = BCrypt.Net.BCrypt.HashPassword(inputData.Email, salt);
+            string hashedFirstName = BCrypt.Net.BCrypt.HashPassword(inputData.FirstName, salt);
+            string hashedMiddleName = BCrypt.Net.BCrypt.HashPassword(inputData.MiddleName, salt);
+            string hashedLastName = BCrypt.Net.BCrypt.HashPassword(inputData.LastName, salt);
+            string hashedPhoneNumber = BCrypt.Net.BCrypt.HashPassword(inputData.PhoneNumber, salt);
 
             await ClassContext.Users.AddAsync(
                 new User()
@@ -116,6 +101,24 @@ namespace labaprovor
             };
 
             return Ok(response);
+        }
+
+        [HttpDelete("{id::guid}")]
+        public async Task<ActionResult<Guid>> Delete(Guid id)
+        {
+            if (await ClassContext.Users.FirstOrDefaultAsync(m => m.Id == id) == null)
+                return BadRequest();
+
+            await ClassContext.Users.Where(m => m.Id == id).ExecuteDeleteAsync();
+
+            return Ok();
+        }
+        [HttpDelete("full")]
+        public async Task<ActionResult<Guid>> DeleteFull()
+        {
+            await ClassContext.Users.Where(a => true).ExecuteDeleteAsync();
+
+            return Ok();
         }
     }
 }

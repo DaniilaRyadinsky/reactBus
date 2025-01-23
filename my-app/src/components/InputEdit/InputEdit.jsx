@@ -9,9 +9,6 @@ const InputEdit = ({...props}) => {
          console.log(data)
       }
 
-    //   console.log(props.data1)
-    //   console.log(data2)
-// type='text' className={styles.input}
     
   return (
     <>

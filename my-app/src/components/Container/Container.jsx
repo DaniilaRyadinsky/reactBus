@@ -1,8 +1,6 @@
 import React from 'react'
 import Header from '../Header/Header'
 import styles from './Container.module.css'
-import Login from '../login/Login'
-import Registration from '../registration/Registration'
 import SideBar from '../SideBar/SideBar'
 
 const Container = (props) => {

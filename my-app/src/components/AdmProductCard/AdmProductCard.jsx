@@ -2,7 +2,7 @@ import React from 'react'
 import ProductCard from '../ProductCard/ProductCard';
 import BtnReg from '../BtnReg/BtnReg'
 import styles from './AdmP.module.css'
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 

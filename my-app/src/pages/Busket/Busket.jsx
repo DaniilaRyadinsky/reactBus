@@ -1,9 +1,9 @@
 import React from 'react'
 import Container from '../../components/Container/Container'
 import { useState, useEffect } from 'react'
-import ProductBusket from '../../components/productBusket/ProductBusket'
-import styles from '../Catalog/Catalog.module.css'
-import CategoryModule from '../../components/CategoryModule/CategoryModule'
+import CatalogModuleBusk from '../../components/CatalogModule/CatalogModuleBusk'
+
+
 
 const Busket = () => {
     const [items, setItem] = useState([])
@@ -11,10 +11,10 @@ const Busket = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`http://localhost:5099/User/allcategorybyuser?Login=${sessionStorage.getItem('username')}`)
+        fetch(`http://localhost:5099/User/ordersbylogin?Login=${sessionStorage.getItem('username')}`)
             .then(res2 => (res2.json()).then((r) =>
                 setItem(r)))
-            setLoading(false);
+        setLoading(false);
     }, [])
 
     console.log(items)
@@ -22,10 +22,8 @@ const Busket = () => {
         <Container>
             <h2>Корзина</h2>
 
-            {items.length === 0 && <p>Корзина Пуста</p>}
-            <ul className={styles.product_list}>
-                <CategoryModule loading={loading} items={items} link={'busket'}/>
-            </ul>
+            <CatalogModuleBusk loading={loading} items={items} />
+
         </Container>
     )
 }

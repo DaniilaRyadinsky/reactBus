@@ -1,24 +1,74 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from '../../components/Container/Container'
 import Input from '../../components/Input/Input'
 import styles from './Contacts.module.css'
 import BtnReg from '../../components/BtnReg/BtnReg'
 
 const Contacts = () => {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [topic, setTopic] = useState('')
+    const [text, setText] = useState('')
+    const [isSave, setIsSave] = useState(false)
+
+    function handleChange(event) {
+        setIsSave(false)
+        if (event.target.id === "name")
+            setName(event.target.value)
+        else if (event.target.id === "email")
+            setEmail(event.target.value)
+        else if (event.target.id === "topic")
+            setTopic(event.target.value)
+        if (event.target.id === "text")
+            setText(event.target.value)
+    }
+
+    function send() {
+        const struct = {
+            "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "email": email,
+            "name": name,
+            "theme": topic,
+            "message": text
+        }
+        fetch("http://localhost:5099/Review", {
+            method: "POST",
+            mode: "cors",
+            headers: {
+                'Accept': '*/*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(struct)
+        }).then((response) => {
+            if (response.status === 200) {
+                setIsSave(true)
+                setText('')
+                setTopic('')
+            }
+            else {
+                console.log('err')
+                return;
+            }
+            // window.location.reload( true ) ;
+        }).catch((error) => console.log(error));
+    }
+
+
     return (
         <Container isActiveSideBar={true}>
             <h2>Напишите нам</h2>
-            <form className={styles.form} action="https://formspree.io/forms/mzzzonbj/submissions" method="post">
+            <div className={styles.form}>
                 <label className={styles.label} for="name">Имя:</label>
-                <Input type="text" id="name" name="name" required />
+                <Input type="text" id="name" name="name" required onChange={handleChange} value={name}/>
                 <label className={styles.label} for="email">Email:</label>
-                <Input type="email" id="email" name="email" required />
-                <label className={styles.label} for="subject">Тема:</label>
-                <Input type="text" id="subject" name="subject" required />
-                <label className={styles.label} for="message">Сообщение:</label>
-                <textarea id="message" name="message" required></textarea>
-                <BtnReg type="submit" >Отправить</BtnReg>
-            </form>
+                <Input type="email" id="email" name="email" required onChange={handleChange} value={email}/>
+                <label className={styles.label} for="topic">Тема:</label>
+                <Input type="text" id="topic" name="topic" required onChange={handleChange} value={topic}/>
+                <label className={styles.label} for="text" >Сообщение:</label>
+                <textarea id="text" name="text" required onChange={handleChange} value={text}></textarea>
+                <BtnReg onClick={send}>Отправить</BtnReg>
+                {isSave && <p>Отправлено</p>}
+            </div>
             <div >
                 {/* style="width: 300px; border: 1px solid #000; padding: 10px; margin-bottom: 10px;" */}
                 <h3>Адрес:</h3>

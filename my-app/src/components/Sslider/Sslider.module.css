@@ -1,8 +1,15 @@
 .slider_container {
-
 margin-bottom: 20px;
 }
 
 .slider {
     margin-bottom: 40px;
+    width: 1530px;
+    height: 500px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.slider_container_img {
+    width: 1550px;
+    height: 500px;
 }

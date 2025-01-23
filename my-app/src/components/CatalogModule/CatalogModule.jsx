@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import ProductCard from '../../components/ProductCard/ProductCard'
 import styles from './CatalogModule.module.css'
 
@@ -16,4 +16,6 @@ const CatalogModule = (props) => {
     )
 }
 
+
 export default CatalogModule
+

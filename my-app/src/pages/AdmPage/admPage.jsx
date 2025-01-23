@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Container from '../../components/Container/Container'
 import styles from './admPage.module.css'
-import AdmProductCard from '../../components/AdmProductCard/AdmProductCard'
 import Input from '../../components/Input/Input'
 import BtnReg from '../../components/BtnReg/BtnReg'
 import CatalogModuleAdm from '../../components/CatalogModule/CatalogModuleAdm'
-import CategoryModule from '../../components/CategoryModule/CategoryModule'
 
 
 const AdmPage = () => {

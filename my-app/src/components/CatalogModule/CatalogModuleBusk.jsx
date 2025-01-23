@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styles from './CatalogModule.module.css'
-import AdmProductCard from '../AdmProductCard/AdmProductCard'
 import ProductBusket from '../productBusket/ProductBusket'
 
-const CatalogModule = (props) => {
+const CatalogModuleBusk = (props) => {
     
     return (
         <div className={styles.content}>
+            {props.items.length === 0 && <p>Корзина Пуста</p>}
             {props.loading && <p>loading...</p>}
             {!props.loading &&
                 <ul className={styles.product_list}>
@@ -17,4 +17,4 @@ const CatalogModule = (props) => {
     )
 }
 
-export default CatalogModule
+export default CatalogModuleBusk

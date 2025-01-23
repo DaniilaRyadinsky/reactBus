@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styles from './Header.module.css'
 import { Link, useNavigate } from 'react-router-dom'
-import Input from '../Input/Input'
 import BtnReg from '../BtnReg/BtnReg'
 import Login from '../login/Login'
 import Registration from '../registration/Registration'

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import CategoryCard from '../../components/CategoryCard/CategoryCard'
 import styles from './CategoryModule.module.css'
 

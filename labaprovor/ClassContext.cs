@@ -9,11 +9,12 @@ namespace labaprovor
             //Database.EnsureCreated();
         }
        
-
+        public DbSet<Review> Reviews { get; set; }
         public DbSet<Bus> Buses { get; set; }
         public DbSet<BusImg> BusesImges { get; set; }
         public DbSet<BusParams> BusesParams { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Slider> Sliders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

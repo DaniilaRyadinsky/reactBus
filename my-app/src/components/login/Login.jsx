@@ -1,23 +1,9 @@
 import React, { useState } from 'react'
 import styles from './Login.module.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import BtnReg from '../BtnReg/BtnReg'
 import Input from '../Input/Input'
 
-
-function setToken(str) {
-    localStorage.setItem("token", str);
-}
-
-function setLogin(str) {
-
-}
-
-function getToken() {
-    return localStorage.getItem("token");
-}
-
-export { getToken, setToken };
 
 const Login = ({ setActive }) => {
     const [login, setLogin] = useState('')
@@ -36,8 +22,6 @@ const Login = ({ setActive }) => {
     }
 
     function auth() {
-        // console.log(login)
-        // console.log(password)
         if (login === '') {
             setPlaceholderogin('Введите логин')
         }
@@ -58,6 +42,8 @@ const Login = ({ setActive }) => {
             "middleName": "string",
             "phoneNumber": "string"
         }
+
+        console.log(struct)
 
         fetch("http://localhost:5099/User/login", {
             method: "POST",

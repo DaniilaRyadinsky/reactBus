@@ -1,34 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Slider from 'react-slick';
+import { useEffect } from 'react';
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import styles from './Sslider.module.css'
-import page1 from '../../img/MGL_2434.jpg'
-import page2 from '../../img/61a5da4d82682c200d8f08cb.jpg'
-import page3 from '../../img/nBkSUhL2h1AlmcmzIL6BrNOp2Z318Ji-mijFnuWR9mOBdDebBizCnTY8qdJf6ReJ58vU9meMMok3Ee2nhSR6ISeO9G1N_wjJ=sxnVU-LPYA9QdYVxQW2D4w.jpg'
 
 const Sslider = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500, 
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      };
-    
-      return (
-        <Slider className={styles.slider} {...settings}>
-          <div className={styles.slider_container}>
-            <img src={page1} alt='slide-1' />
-          </div>
-          <div>
-            <img src={page2} alt='slide-2' />
-          </div>
-          <div>
-            <img src={page3} alt='slide-3' />
-          </div>
-        </Slider>
-      );
+  const [items, setItems] = useState([])
+
+  useEffect(() => {
+
+    fetch(`http://localhost:5099/Slider`)
+      .then(res2 => (res2.json()).then((r) =>
+        setItems(r)))
+
+  }, [])
+
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
+  const Slide = (props) => {
+    return (
+      <div className={styles.slider_container}>
+        <img src={props.image} alt='slide' className={styles.slider_container_img} />
+      </div>
+    )
+  }
+
+  return (
+    <Slider className={styles.slider} {...settings}>
+      {items.map(item => <Slide {...item} />)}
+    </Slider>
+  );
 }
 
 export default Sslider

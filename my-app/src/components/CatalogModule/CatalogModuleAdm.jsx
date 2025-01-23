@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styles from './CatalogModule.module.css'
 import AdmProductCard from '../AdmProductCard/AdmProductCard'
 
-const CatalogModule = (props) => {
+const CatalogModuleAdm = (props) => {
     
     return (
         <div className={styles.content}>
@@ -16,4 +16,4 @@ const CatalogModule = (props) => {
     )
 }
 
-export default CatalogModule
+export default CatalogModuleAdm
