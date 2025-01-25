@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dikij\\OneDrive\\Документы\\study fuck\\web\\reactBus\\labaprovor\\labaprovor.csproj": {}
+    "D:\\progers\\vsr\\labaprovoract\\labaprovor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dikij\\OneDrive\\Документы\\study fuck\\web\\reactBus\\labaprovor\\labaprovor.csproj": {
+    "D:\\progers\\vsr\\labaprovoract\\labaprovor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dikij\\OneDrive\\Документы\\study fuck\\web\\reactBus\\labaprovor\\labaprovor.csproj",
+        "projectUniqueName": "D:\\progers\\vsr\\labaprovoract\\labaprovor.csproj",
         "projectName": "labaprovor",
-        "projectPath": "C:\\Users\\dikij\\OneDrive\\Документы\\study fuck\\web\\reactBus\\labaprovor\\labaprovor.csproj",
-        "packagesPath": "C:\\Users\\dikij\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dikij\\OneDrive\\Документы\\study fuck\\web\\reactBus\\labaprovor\\obj\\",
+        "projectPath": "D:\\progers\\vsr\\labaprovoract\\labaprovor.csproj",
+        "packagesPath": "C:\\Users\\Николай\\.nuget\\packages\\",
+        "outputPath": "D:\\progers\\vsr\\labaprovoract\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\learning\\c\\packet\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\dikij\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Николай\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -43,8 +43,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -110,7 +109,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

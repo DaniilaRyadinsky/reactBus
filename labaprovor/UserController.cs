@@ -20,24 +20,20 @@ namespace labaprovor
 
         [HttpGet("ordersbylogin")]
 
-        public ActionResult<List<BusVIEEEEEW>> GetOrdersById([FromQuery] string Login)
+        public async Task<ActionResult<List<ResicleBinView>>> GetOrdersById([FromQuery] string Login)
         {
+            var user = await ClassContext.Users.FirstOrDefaultAsync(u => u.Login == Login);
+            if (user == null) return BadRequest();
             return Ok(ClassContext
-                .Users
-                .FirstOrDefault(u => u.Login == Login)!
-                .Buses
-                .Select(i => new BusVIEEEEEW()
+                .Set<UserBus>()
+                .Where(ub => ub.UserId == user.Id)
+                .Select(i => new ResicleBinView()
                 {
-                    Id = i.Id,
-                    Title = i.Params.Title,
-                    Description = i.Params.Description,
-                    Consumption = i.Params.Consumption,
-                    Services = i.Params.Services,
-                    Speed = i.Params.Speed,
-                    Сapacity = i.Params.Сapacity,
-                    Image = i.Image.Image,
-                    Category = i.Params.Category,
-                    Price = i.Params.Price,
+                    Title = i.Bus.Params.Title,
+                    Image = i.Bus.Image.Image,
+                    Category = i.Bus.Params.Category,
+                    Price = i.Bus.Params.Price,
+                    Quantity = i.Quantity.ToString()
                 }));
         }
 

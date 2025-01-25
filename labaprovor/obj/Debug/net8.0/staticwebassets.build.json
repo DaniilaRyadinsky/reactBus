@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "nRt8WzXEEU9lKbd3enSjQFa4GeaZf8+zsDGO1NT25zM=",
+  "Hash": "EZaAQFurs3r8l7sl5KIJ9tcGkiHbju/Gq2U9PcwUJ3Q=",
   "Source": "labaprovor",
   "BasePath": "_content/labaprovor",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

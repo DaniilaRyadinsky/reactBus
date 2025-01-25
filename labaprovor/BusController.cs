@@ -94,23 +94,61 @@ namespace labaprovor
 
             if (user == null || bus == null)
                 return BadRequest();
-            
-            bus.Customers.Remove(user);
-            user.Buses.Remove(bus);
-            await ClassContext.SaveChangesAsync();
-            return Ok();
-        }
 
+            var userBus = await ClassContext.Set<UserBus>()
+                                             .FirstOrDefaultAsync(ub => ub.UserId == user.Id && ub.BusId == bus.Id);
+
+            if (userBus != null)
+            {
+                if (userBus.Quantity > 1)
+                {
+                    userBus.Quantity--; // Уменьшаем количество
+                }
+                else
+                {
+                    // Если количество == 1, удаляем запись из промежуточной таблицы
+                    ClassContext.Set<UserBus>().Remove(userBus);
+                    bus.Customers.Remove(user); // Удаляем клиента из автобуса
+                    user.Buses.Remove(bus); // Удаляем автобус из пользователя
+                }
+
+                await ClassContext.SaveChangesAsync();
+                return Ok();
+
+            }
+            else return BadRequest();
+        }
 
         [HttpGet("place")]
         public async Task<ActionResult> Placing([FromQuery] Guid idbus, [FromQuery] string Login)
         {
-            var user = ClassContext.Users.FirstOrDefault(u => u.Login == Login);
-            var bus = ClassContext.Buses.FirstOrDefault(u => u.Id == idbus);
+            var user = await ClassContext.Users.FirstOrDefaultAsync(u => u.Login == Login);
+            var bus = await ClassContext.Buses.FirstOrDefaultAsync(u => u.Id == idbus);
+
             if (user == null || bus == null)
                 return BadRequest();
-            bus.Customers.Add(user);
-            user.Buses.Add(bus);
+
+            var userBus = await ClassContext.Set<UserBus>()
+                                             .FirstOrDefaultAsync(ub => ub.UserId == user.Id && ub.BusId == bus.Id);
+
+            if (userBus != null)
+            {
+                userBus.Quantity++; // Увеличиваем количество
+            }
+            else
+            {
+                // Если записи нет, создаем новую запись в промежуточной таблице
+                var newUserBus = new UserBus
+                {
+                    UserId = user.Id,
+                    BusId = bus.Id,
+                    Quantity = 1 // Начальное количество
+                };
+                await ClassContext.Set<UserBus>().AddAsync(newUserBus);
+            }
+
+            bus.Customers.Add(user); // Добавляем клиента в автобус
+            user.Buses.Add(bus); // Добавляем автобус в пользователя
             await ClassContext.SaveChangesAsync();
             return Ok();
         }

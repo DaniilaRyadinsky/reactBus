@@ -34,6 +34,21 @@ namespace labaprovor
                .Entity<Bus>()
                .HasMany(pr => pr.Customers)
                .WithMany(u => u.Buses);
+            modelBuilder
+               .Entity<Bus>()
+               .HasMany(pr => pr.Customers)
+               .WithMany(u => u.Buses)
+               .UsingEntity<UserBus>(
+                    j => j.HasOne(ub => ub.User)
+                        .WithMany()
+                        .HasForeignKey(ub => ub.UserId),
+                    j => j.HasOne(ub => ub.Bus)
+                        .WithMany()
+                        .HasForeignKey(ub => ub.BusId)
+                );
+
+            modelBuilder.Entity<UserBus>()
+                .HasKey(ub => new { ub.UserId, ub.BusId });
         }
 
     }
