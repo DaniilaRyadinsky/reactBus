@@ -1,6 +1,40 @@
+.content {
+    /* padding: 20px 20px 20px 20px; */
+}
+
 .product_list {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
     padding: 0;
+}
+
+.product_list_busk {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bottombar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.order_container {
+    margin-left: 40px;
+    margin-right: auto;
+}
+
+.sum_container {
+    margin-right: 40px;
+}
+
+.sum_h3 {
+    font-size: 20px;
+}
+
+.sum_div {
+    font-size: 16px;
+    font-weight: bold;
 }

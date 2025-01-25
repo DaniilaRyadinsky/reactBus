@@ -34,44 +34,6 @@
         }
       }
     },
-    "/Bus/allphotos": {
-      "get": {
-        "tags": [
-          "Bus"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/Bus/allcategory": {
       "get": {
         "tags": [
@@ -584,7 +546,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/BusVIEEEEEW"
+                    "$ref": "#/components/schemas/ResicleBinView"
                   }
                 }
               },
@@ -592,7 +554,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/BusVIEEEEEW"
+                    "$ref": "#/components/schemas/ResicleBinView"
                   }
                 }
               },
@@ -600,7 +562,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/BusVIEEEEEW"
+                    "$ref": "#/components/schemas/ResicleBinView"
                   }
                 }
               }
@@ -868,6 +830,36 @@
             "nullable": true
           },
           "price": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResicleBinView": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "image": {
+            "type": "string",
+            "nullable": true
+          },
+          "category": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
             "type": "string",
             "nullable": true
           }

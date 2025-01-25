@@ -17,7 +17,6 @@ const Busket = () => {
         setLoading(false);
     }, [])
 
-    console.log(items)
     return (
         <Container>
             <h2>Корзина</h2>

@@ -1,36 +1,60 @@
 import React, { useEffect, useState } from 'react'
-import styles from './ProductBusket.module'
-import ProductCard from '../ProductCard/ProductCard'
+import styles from './ProductBusket.module.css'
+import { Link } from 'react-router-dom'
 import BtnReg from '../BtnReg/BtnReg'
+import InBusket from '../inBusket/inBusket'
 
 const ProductBusket = (props) => {
-    const [item, setItem] = useState([])
 
-    useEffect(() => {
-        fetch(`http://localhost:5099/Bus/findId?id=${props.id}`)
-            .then(res2 => (res2.json()).then((r) =>
-                setItem(r)))
-    }, [])
+    const [price, setPrice] = useState(Number(props.quantity) * parseInt(props.price))
 
-    async function Delete() {
-        try {
-            const response = await fetch(`http://localhost:5099/Bus/deleteorder?idbus=${props.id}&Login=${sessionStorage.getItem('username')}`);
-      
-            if (response.ok) {
-            } else {
-              console.error('Ошибка при удалении карточки:', response.statusText);
-            }
-          } catch (error) {
-            console.error('Ошибка сети:', error);
-          }
-          window.location.reload( true ) ;
+    // var newValue=0;
+
+    // const handleChange = (e) => {
+    //     newValue = Number(e.target.value)
+
+    // }
+
+    // const handleBlur = () => {
+    //     if (newValue < 0) newValue = 0
+    //     if (newValue > 50) newValue = 50
+    //     if (newValue > counter) {
+    //         setCounter(newValue)
+    //         Add()
+    //     }
+    //     else {
+    //         setCounter(newValue)
+    //         Delete()
+
+    //     }
+    //     props.reload(-parseInt(props.price) * (counter - newValue))
+    //     setPrice(parseInt(props.price) * newValue)
+    //     if (newValue === 0)
+    //         window.location.reload(true);
+    // } 
+
+    function refresh(e) {
+        setPrice(price + e)
+        props.reload(e)
     }
 
+
     return (
-        <div>
-            <ProductCard {...item}></ProductCard>
-            <BtnReg onClick={Delete} >Удалить</BtnReg>
-        </div>
+        <>
+            <li className={styles.card_unit}>
+                <Link className={styles.main_link} to={`/tovar/${props.id}`}>
+                    <img src={props.image} alt="Плотва" className={styles.card_img} />
+                    <div className={styles.card_unit_description_container}>
+                        <h3 className={styles.card_name}>{props.title}</h3>
+                        <p>Категория {props.category}</p>
+                        <p>Цена {price}</p>
+                    </div>
+                </Link>
+                <div className={styles.in_busket_container}>
+                    <InBusket {...props} reload={refresh} />
+                </div>
+            </li>
+        </>
     )
 }
 

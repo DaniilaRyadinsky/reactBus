@@ -51,7 +51,6 @@ const Header = () => {
                     <Link className={styles.nav_buttons_a} to='/'>Каталог</Link>
                     <Link className={styles.nav_buttons_a} to='/about_us'>О нас</Link>
                     <Link className={styles.nav_buttons_a} to='/contacts'>Контакты</Link>
-                    <Link className={styles.nav_buttons_a} to='/policy.txt'>Политика конфиденциальности</Link>
                 </nav>
             </div>
             <div className={styles.btn_container}>

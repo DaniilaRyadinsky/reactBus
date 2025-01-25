@@ -78,17 +78,17 @@ const Login = ({ setActive }) => {
         <div className={styles.container} onClick={() => setActive('none')}>
             <div className={styles.login_container} onClick={e => e.stopPropagation()}>
                 <h1 className={styles.login_title}>Вход в профиль</h1>
-                <div>
+                <div className={styles.login_input}>
                     {placeholderLogin !== '' && <p className={styles.err}>{placeholderLogin}</p>}
                     <Input type="text" id="login" placeholder='Логин' onChange={handleChange} value={login} />
                 </div>
-                <div>
+                <div className={styles.login_input}>
                     {placeholderPassword !== '' && <p className={styles.err}>{placeholderPassword}</p>}
                     <Input type="password" id="pass1" placeholder='Пароль' onChange={handleChange} value={password1} />
                 </div>
                 <Input type="password" value={password2} id="pass2" placeholder={'Повторите пароль'} onChange={handleChange} />
 
-                <Link className={styles.loginlink}>Не помню пароль</Link>
+                {/* <Link className={styles.loginlink}>Не помню пароль</Link> */}
                 <div className={styles.btn_login_container}>
                     <BtnReg onClick={auth}>Войти</BtnReg>
                     <BtnReg style={{ color: "#666" }} onClick={() => setActive('reg')}>Регистрация</BtnReg>

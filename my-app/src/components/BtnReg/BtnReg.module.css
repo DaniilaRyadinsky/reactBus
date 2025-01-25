@@ -1,7 +1,8 @@
 
 .btn_reg {
+    margin: 0;
+    padding: 16px 32px 16px 32px ;
     width: 100%; /* Заполнение ширины */
-    height: 45px; /* Высота кнопки */
     background-color: #6a1b9a; /* Цвет фона кнопки */
     color: white; /* Цвет текста на кнопке */
     border: none; /* Убрать рамку */

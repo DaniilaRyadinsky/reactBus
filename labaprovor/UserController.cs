@@ -29,6 +29,7 @@ namespace labaprovor
                 .Where(ub => ub.UserId == user.Id)
                 .Select(i => new ResicleBinView()
                 {
+                    Id = i.Bus.Id,
                     Title = i.Bus.Params.Title,
                     Image = i.Bus.Image.Image,
                     Category = i.Bus.Params.Category,

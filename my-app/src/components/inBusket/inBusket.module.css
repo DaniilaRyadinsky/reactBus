@@ -1,0 +1,36 @@
+.in_busket_container {
+    /* height: 100%; */
+}
+
+.in_busket {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.in_busket_label {
+    margin-right: 10px;
+}
+
+.add_delete {
+    display: flex;
+    flex-direction: row;
+}
+
+.in_busket_number{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    -moz-appearance: textfield; /* Убираем стрелки в Firefox */
+    -webkit-appearance: none; /* Убираем стрелки в Chrome, Safari и Edge */
+    appearance: none; /* Убираем стрелки в других браузерах */
+}
+
+.in_busket_number::-webkit-inner-spin-button,
+.in_busket_number::-webkit-outer-spin-button {
+    display: none; /* Скрываем стрелки */
+}
