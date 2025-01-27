@@ -95,8 +95,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-18T21:09:03.266Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -104,9 +103,9 @@
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\UserController.cs",
               "RelativeDocumentMoniker": "UserController.cs",
-              "ToolTip": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\UserController.cs",
-              "RelativeToolTip": "UserController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAgwB8AAAAiAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\dikij\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\study fuck\\web\\reactBus\\labaprovor\\UserController.cs*",
+              "RelativeToolTip": "UserController.cs*",
+              "ViewState": "AgIAABYAAAAAAAAAAAA1wCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-18T21:30:53.946Z",
               "IsPinned": true,
@@ -122,8 +121,7 @@
               "RelativeToolTip": "ResicleBinView.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T16:39:42.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T16:39:42.254Z"
             },
             {
               "$type": "Document",
